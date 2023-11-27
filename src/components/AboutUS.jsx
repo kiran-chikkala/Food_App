@@ -24,15 +24,15 @@ const AboutUS = () => {
 
   return (
     <div>
-      <div className=" flex  items-center">
+      <div className="  flex md:flex-row  flex-col items-center">
         <img
           className=" w-[620px] rounded-full"
           src="https://hungerendsherebyshantanu.netlify.app/thal.9318d109.jpg"
           alt=""
         />
-        <div className="  mx-20 flex flex-col">
+        <div className="  mx-2 md:mx-20 flex flex-col">
           <div className="  bg-blue-200  ">
-            <p className=" font-bold text-blue-900 px-4 py-4 w-4/6">
+            <p className=" font-bold text-blue-900 px-4 py-4 w-full md:w-4/6">
               "Simplicity with a side of laughter! Our food is so good, it told
               a joke. Simple ingredients, serious flavor, hilarious
               satisfaction!"

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import { CiShoppingCart } from "react-icons/ci";
 import { useSelector } from "react-redux";
 
 const Header = () => {
@@ -26,11 +26,14 @@ const Header = () => {
             <Link to="/about">About Us</Link>
           </li>
 
-          <li className="  mx-1 md:mx-2 px-1 md:px-2 font-bold">
-            <Link to="/cart">Cart({Cartitems.length})</Link>
+          <li className="  mx-1 md:mx-2 px-1 md:px-2 ">
+            <Link to="/cart">
+              Cart
+              <CiShoppingCart size={20} className=" inline-block" />
+            </Link>
           </li>
-          <button className="mx-2 px-2" onClick={() => setBtn("logout")}>
-            {btn}
+          <button className="mx-2 px-2" onClick={() => setBtn(!btn)}>
+            {btn ? "login" : "logout"}
           </button>
         </div>
       </div>

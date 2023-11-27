@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const Profile = () => {
   const [profile, setprofile] = useState({});
-  console.log(profile);
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -17,14 +17,12 @@ const Profile = () => {
       }
       const userData = await response.json();
       setprofile(userData);
-    } catch (error) {
-      console.error("Error:", error);
-    }
+    } catch (error) {}
   };
 
   return (
     <div className=" bg-gradient-to-b from-green-300 to-t from bg-yellow-100 w-screen  h-[90vh] flex items-center justify-center">
-      <div className=" w-2/6 h-4/6 p-6 bg-white shadow-2xl ">
+      <div className=" w-full md:w-2/6 h-full md:h-4/6 p-6 bg-white shadow-2xl ">
         <div className=" flex">
           <img
             className="  w-[210px] h-55 rounded-lg"
@@ -51,7 +49,7 @@ const Profile = () => {
         <h1 className=" font-bold text-4xl ">Kiran Chikkala</h1>
         <h1 className=" my-3"> React dev</h1>
         <div className=" my-2 ">
-          <div className="    w-[90px] h-[90px] flex mix-blend-multiply ">
+          <div className="  w-[60px]  md:w-[90px] h-[90px] flex mix-blend-multiply ">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1150px-React-icon.svg.png"
               alt=""

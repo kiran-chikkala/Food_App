@@ -1,14 +1,17 @@
 import React from "react";
 import ListMenu from "./ListMenu";
 import { useDispatch, useSelector } from "react-redux";
-import { clearItems } from "../Redux/cartSlice";
+import { clearAmount, clearItems } from "../Redux/cartSlice";
 // import store from "../Redux/store";
 
 const Cart = () => {
   const dispatch = useDispatch();
   const cardItems = useSelector((store) => store.cart.items);
+  const amount = useSelector((item) => item?.cart?.Amount);
+
   const handleClear = () => {
     dispatch(clearItems());
+    dispatch(clearAmount());
   };
   return (
     <div>
